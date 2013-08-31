@@ -151,7 +151,7 @@ class archiva(
     }
   } else {
     wget::fetch { 'archiva_download':
-      source      => "${apache_mirror}/archiva/binaries/apache-archiva-${version}-bin.tar.gz",
+      source      => "${apache_mirror}/archiva/${version}/binaries/apache-archiva-${version}-bin.tar.gz",
       destination => $archive,
       notify      => Exec['archiva_untar'],
     }
